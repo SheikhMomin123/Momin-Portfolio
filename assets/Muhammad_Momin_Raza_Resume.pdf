@@ -1,0 +1,69 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1100 >>
+stream
+BT
+/F1 18 Tf 40 750 Td (Muhammad Momin Raza) Tj
+/F1 12 Tf 40 730 Td (Frontend Developer • Software QA Engineer • Entry-Level Software Engineer) Tj
+40 712 Td ( ) Tj
+/F1 11 Tf 40 700 Td (Email: mominraza802@gmail.com) Tj
+40 684 Td (LinkedIn: https://www.linkedin.com/in/momin-raza-040850377/) Tj
+40 666 Td (Location: Rawalpindi, Pakistan) Tj
+40 648 Td ( ) Tj
+/F1 12 Tf 40 630 Td (Professional Summary:) Tj
+/F1 11 Tf 40 614 Td (Results-driven Computer Science graduate (CGPA 3.05, SZABIST) with hands-on expertise in frontend web development and software testing.) Tj
+40 596 Td (Proficient in React and Next.js, with experience building responsive, component-based UIs and integrating backend APIs.) Tj
+40 578 Td (Skilled at writing clean, maintainable code and applying structured problem-solving to deliver reliable software.) Tj
+40 560 Td ( ) Tj
+/F1 12 Tf 40 542 Td (Technical Skills:) Tj
+/F1 11 Tf 40 524 Td (Languages: JavaScript, Python, C++, HTML5, CSS3) Tj
+40 506 Td (Frameworks: React.js, Next.js) Tj
+40 488 Td (Databases: PostgreSQL, MySQL) Tj
+40 470 Td (Tools & QA: Git, GitHub, VS Code, Postman, Manual Testing, Test Case Design) Tj
+40 452 Td ( ) Tj
+/F1 12 Tf 40 434 Td (Education:) Tj
+/F1 11 Tf 40 418 Td (BS Computer Science — SZABIST University, Islamabad (2022–2026)) Tj
+40 400 Td (Graduated — CGPA: 3.05 / 4.0) Tj
+40 382 Td ( ) Tj
+/F1 12 Tf 40 364 Td (Selected Projects:) Tj
+/F1 11 Tf 40 348 Td (Smart Room Booking Platform (2025–2026) — Next.js, Django, PostgreSQL) Tj
+40 330 Td (- Architected full-stack booking system with real-time availability and conflict resolution.) Tj
+40 312 Td (- Implemented smart filtering and conducted end-to-end testing across 15+ scenarios.) Tj
+40 294 Td ( ) Tj
+40 276 Td (AI-Powered Inventory Management System (2024) — Python) Tj
+40 258 Td (- Developed stock-level prediction logic and automation for alerts and reorder triggers.) Tj
+40 240 Td (- Achieved 90%+ unit test coverage for core functions.) Tj
+40 222 Td ( ) Tj
+40 204 Td (Hospital Patient Management System (2023) — C++) Tj
+40 186 Td (- Built OOP-based console app with persistent file storage and search functionality.) Tj
+40 168 Td ( ) Tj
+/F1 12 Tf 40 150 Td (Availability:) Tj
+/F1 11 Tf 40 132 Td (Seeking opportunities in Frontend Development, Software QA, or Entry-Level Software Engineering.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000060 00000 n 
+0000000112 00000 n 
+0000000386 00000 n 
+0000001418 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1554
+%%EOF
