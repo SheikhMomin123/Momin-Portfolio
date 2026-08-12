@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Or set USE_SERVER to true and run the optional Node backend included in this repo.
   const CONFIG = {
     FORMSPREE_ENDPOINT: '',
-    USE_SERVER: false,
+    USE_SERVER: true,
     SERVER_ENDPOINT: 'http://localhost:3000/send'
   };
   // Nav toggle for mobile
@@ -68,74 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     else backTop.style.display = 'none';
   });
   backTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-  // Contact form validation and submission (supports Formspree or local server)
-  const form = document.getElementById('contactForm');
-  const formMsg = document.getElementById('formMsg');
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    formMsg.textContent = '';
-    const name = form.querySelector('#name').value.trim();
-    const email = form.querySelector('#email').value.trim();
-    const message = form.querySelector('#message').value.trim();
-
-    if (!name || !email || !message) {
-      formMsg.textContent = 'Please fill out all fields.';
-      return;
-    }
-    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!emailValid) { formMsg.textContent = 'Please enter a valid email.'; return; }
-    if (message.length < 10) { formMsg.textContent = 'Message should be at least 10 characters.'; return; }
-
-    const payload = { name, email, message };
-
-    try {
-      formMsg.textContent = 'Sending...';
-      if (CONFIG.USE_SERVER) {
-        // POST to local/remote server that relays email (see server folder)
-        const res = await fetch(CONFIG.SERVER_ENDPOINT, {
-          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
-        });
-        const data = await res.json();
-        if (res.ok) {
-          formMsg.textContent = 'Message sent — thank you!';
-          form.reset();
-        } else {
-          formMsg.textContent = data?.error || 'Failed to send message.';
-        }
-      } else {
-        // Client-side submission to Formspree
-        if (!CONFIG.FORMSPREE_ENDPOINT || CONFIG.FORMSPREE_ENDPOINT.includes('yourFormId')) {
-          formMsg.textContent = 'Contact form is not configured. Set CONFIG.FORMSPREE_ENDPOINT in script.js or enable USE_SERVER.';
-          return;
-        }
-        const formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('message', message);
-        const res = await fetch(CONFIG.FORMSPREE_ENDPOINT, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
-        const data = await res.json().catch(() => null);
-        if (res.ok) {
-          formMsg.textContent = 'Message sent — thank you!';
-          form.reset();
-        } else if (data?.error) {
-          if (data.error.toLowerCase().includes('form not found')) {
-            formMsg.textContent = 'Formspree endpoint invalid. Update CONFIG.FORMSPREE_ENDPOINT in script.js with the correct Formspree URL.';
-          } else {
-            formMsg.textContent = data.error;
-          }
-        } else if (res.status === 404) {
-          formMsg.textContent = 'Formspree endpoint not found (404). Please verify CONFIG.FORMSPREE_ENDPOINT in script.js.';
-        } else {
-          formMsg.textContent = 'Failed to send message. Check your Formspree endpoint or enable USE_SERVER.';
-        }
-      }
-    } catch (err) {
-      console.error(err);
-      formMsg.textContent = 'An error occurred while sending.';
-    }
-    setTimeout(()=> formMsg.textContent = '', 6000);
-  });
 
   // Inject current year in footer
   const yearEl = document.getElementById('year');
