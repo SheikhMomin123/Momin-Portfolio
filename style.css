@@ -52,9 +52,11 @@ body{
 .hero-contact span{display:block;font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem}
 .hero-contact a{color:#fff;text-decoration:none;font-weight:600}
 .contact-card{display:flex;align-items:center;justify-content:center;min-height:100%}
-.contact-icon-link{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.contact-icon-link{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);transition:transform .25s ease,box-shadow .25s ease,background .25s ease;color:#fff}
 .contact-icon-link:hover{transform:translateY(-2px);box-shadow:0 16px 35px rgba(60,195,161,0.18);background:rgba(60,195,161,0.12)}
-.contact-icon-img{width:26px;height:26px;object-fit:contain;display:block;filter:brightness(0) invert(1)}
+.contact-icon-img,.contact-icon-svg{width:26px;height:26px;object-fit:contain;display:block}
+.contact-icon-img{filter:brightness(0) invert(1)}
+.contact-icon-svg{fill:currentColor;color:#fff}
 .contact-icon-link--compact{width:48px;height:48px}
 .hero-actions{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem}
 .hero-visual{display:flex;align-items:center;justify-content:center;position:relative;padding-top:1rem;min-height:420px}
@@ -65,10 +67,7 @@ body{
 .badge-top{top:8%;right:6%;transform:none}
 .badge-left{left:6%;top:46%;transform:none}
 .badge-bottom{bottom:8%;right:10%;transform:none}
-.photo-dot{position:absolute;border-radius:50%;background:rgba(60,195,161,0.85);opacity:.9}
-.dot1{width:12px;height:12px;top:10%;left:5%}
-.dot2{width:16px;height:16px;bottom:18%;right:12%}
-.dot3{width:8px;height:8px;top:35%;right:18%}
+
 .hero-stats{margin-top:3rem;padding:2rem 0 0}
 .stats-grid{display:grid;grid-template-columns:repeat(5,minmax(160px,1fr));gap:1rem}
 .stat-card{background:rgba(255,255,255,0.04);padding:1.2rem 1rem;border-radius:18px;border:1px solid rgba(255,255,255,0.05);box-shadow:0 16px 40px rgba(0,0,0,0.16);min-height:120px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
