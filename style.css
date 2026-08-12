@@ -47,8 +47,8 @@ body{
 .hero-highlight{background:linear-gradient(90deg,#3cc3a1,#2b6db3);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero-subtitle{color:var(--muted);font-size:1rem;margin:1.2rem 0 1.2rem;line-height:1.8;max-width:660px}
 .intro{font-size:1rem;line-height:1.9;max-width:680px;color:#cdd9ee}
-.hero-contact{display:grid;grid-template-columns:repeat(2,minmax(180px,1fr));gap:1rem;margin-top:2rem}
-.hero-contact div{background:rgba(255,255,255,0.04);padding:1rem 1.1rem;border-radius:16px;border:1px solid rgba(255,255,255,0.06);box-shadow:0 18px 45px rgba(0,0,0,0.18)}
+.hero-contact{display:flex;align-items:stretch;gap:1rem;margin-top:2rem;flex-wrap:nowrap}
+.hero-contact div{background:rgba(255,255,255,0.04);padding:1rem 1.1rem;border-radius:16px;border:1px solid rgba(255,255,255,0.06);box-shadow:0 18px 45px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;min-width:0;flex:0 0 auto}
 .hero-contact span{display:block;font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem}
 .hero-contact a{color:#fff;text-decoration:none;font-weight:600}
 .contact-card{display:flex;align-items:center;justify-content:center;min-height:100%}
@@ -104,9 +104,10 @@ body{
 
 .education-item{background:var(--card);padding:1rem;border-radius:10px}
 
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-grid{display:block}
+.contact-info{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:1rem}
 .contact-info a{color:var(--accent)}
-.contact-info .contact-icon-link{margin-top:.25rem}
+.contact-info .contact-icon-link{margin-top:0}
 .contact-form{display:flex;flex-direction:column;gap:.5rem}
 .contact-form input,.contact-form textarea{padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
 .form-msg{margin-top:.5rem;color:var(--accent)}
@@ -131,7 +132,7 @@ body{
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr;gap:2rem;text-align:center}
   .hero-copy,.hero-visual{justify-content:center}
-  .hero-contact{grid-template-columns:1fr;}
+  .hero-contact{display:flex;justify-content:flex-start;gap:1rem}
   .hero-stats{margin-top:2rem}
   .stats-grid{grid-template-columns:repeat(2,minmax(160px,1fr))}
   .skills-grid{grid-template-columns:repeat(2,1fr)}
