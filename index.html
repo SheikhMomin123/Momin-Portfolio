@@ -32,16 +32,22 @@
     <section id="home" class="hero section">
       <div class="hero-inner container">
         <div class="hero-copy">
-          <span class="hero-badge reveal">Computer Science Graduate</span>
           <div class="hero-title reveal">
             <h1>Muhammad</h1>
             <h1><span>Momin</span> <span class="hero-highlight">Raza</span></h1>
           </div>
-          <p class="hero-subtitle reveal">Frontend Developer • Software QA Engineer • Entry-Level Software Engineer</p>
           <p class="intro reveal">Results-driven Computer Science graduate skilled in frontend development and software quality assurance. I build responsive, accessible user interfaces and apply structured testing to deliver reliable software.</p>
           <div class="hero-contact reveal">
-            <div><span>Email</span><a href="mailto:mominraza802@gmail.com">mominraza802@gmail.com</a></div>
-            <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/momin-raza-040850377/" target="_blank" rel="noopener">linkedin.com/in/momin-raza-040850377</a></div>
+            <div class="contact-card">
+              <a class="contact-icon-link" href="mailto:mominraza802@gmail.com" aria-label="Send an email to mominraza802@gmail.com">
+                <img src="assets/email-icon.png" alt="Email" class="contact-icon-img">
+              </a>
+            </div>
+            <div class="contact-card">
+              <a class="contact-icon-link" href="https://www.linkedin.com/in/momin-raza-040850377/" target="_blank" rel="noopener" aria-label="Visit my LinkedIn profile">
+                <img src="assets/linkedin-icon.png" alt="LinkedIn" class="contact-icon-img">
+              </a>
+            </div>
           </div>
           <div class="hero-actions reveal">
             <a class="btn primary" href="#projects">View My Work</a>
@@ -139,7 +145,14 @@
       <h2 class="section-title reveal">Projects</h2>
       <div class="projects-grid">
         <article class="project-card reveal">
-          <h3>Smart Room Booking Platform <span class="year">(2025–2026)</span></h3>
+          <div class="project-header">
+            <h3>Smart Room Booking Platform <span class="year">(2025–2026)</span></h3>
+            <a class="project-github-link" href="https://github.com/SheikhMomin123/" target="_blank" rel="noopener" aria-label="View Smart Room Booking Platform GitHub repository">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.9.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.34-1.27-1.7-1.27-1.7-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.74.8 1.18 1.83 1.18 3.09 0 4.42-2.7 5.39-5.27 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+              </svg>
+            </a>
+          </div>
           <p class="tech">Technologies: Next.js, Django, PostgreSQL</p>
           <p>Full-stack room booking system with real-time availability and conflict-free reservations.</p>
           <ul>
@@ -149,11 +162,17 @@
             <li>Built smart filters for capacity, date range, and amenities.</li>
             <li>Conducted end-to-end testing across 15+ user scenarios and fixed critical bugs.</li>
           </ul>
-          <a class="btn ghost" href="#">GitHub</a>
         </article>
 
         <article class="project-card reveal">
-          <h3>AI-Powered Inventory Management System <span class="year">(2024)</span></h3>
+          <div class="project-header">
+            <h3>AI-Powered Inventory Management System <span class="year">(2024)</span></h3>
+            <a class="project-github-link" href="https://github.com/SheikhMomin123/" target="_blank" rel="noopener" aria-label="View AI-Powered Inventory Management System GitHub repository">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.9.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.34-1.27-1.7-1.27-1.7-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.74.8 1.18 1.83 1.18 3.09 0 4.42-2.7 5.39-5.27 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+              </svg>
+            </a>
+          </div>
           <p class="tech">Technologies: Python</p>
           <p>Inventory automation with stock-level prediction using historical patterns.</p>
           <ul>
@@ -162,11 +181,17 @@
             <li>Wrote unit tests achieving 90%+ coverage on core modules.</li>
             <li>Reduced simulated stockout events by 40% in testing scenarios.</li>
           </ul>
-          <a class="btn ghost" href="#">GitHub</a>
         </article>
 
         <article class="project-card reveal">
-          <h3>Hospital Patient Management System <span class="year">(2023)</span></h3>
+          <div class="project-header">
+            <h3>Hospital Patient Management System <span class="year">(2023)</span></h3>
+            <a class="project-github-link" href="https://github.com/SheikhMomin123/" target="_blank" rel="noopener" aria-label="View Hospital Patient Management System GitHub repository">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.9.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.34-1.27-1.7-1.27-1.7-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.74.8 1.18 1.83 1.18 3.09 0 4.42-2.7 5.39-5.27 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+              </svg>
+            </a>
+          </div>
           <p class="tech">Technologies: C++</p>
           <p>Console-based patient records and appointment management system using OOP.</p>
           <ul>
@@ -174,7 +199,6 @@
             <li>Implemented persistent file-based storage and search functionality.</li>
             <li>Supported 100+ simulated patient records with filtering and reporting.</li>
           </ul>
-          <a class="btn ghost" href="#">GitHub</a>
         </article>
       </div>
     </section>
@@ -185,7 +209,6 @@
       <div class="education-item reveal">
         <h3>BS Computer Science</h3>
         <p>SZABIST University, Islamabad — 2022–2026</p>
-        <p>Graduated — CGPA: 3.05 / 4.0</p>
         <p><strong>Relevant coursework:</strong> Software Engineering, Database Systems, Data Structures & Algorithms, Computer Networks, Web Technologies, OOP, AI Fundamentals</p>
       </div>
     </section>
@@ -195,8 +218,12 @@
       <h2 class="section-title reveal">Contact</h2>
       <div class="contact-grid">
         <div class="contact-info reveal">
-          <p><strong>Email:</strong> <a href="mailto:mominraza802@gmail.com">mominraza802@gmail.com</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/momin-raza-040850377/" target="_blank" rel="noopener">linkedin.com/in/momin-raza-040850377</a></p>
+          <p><a class="contact-icon-link contact-icon-link--compact" href="mailto:mominraza802@gmail.com" aria-label="Send an email to mominraza802@gmail.com">
+            <img src="assets/email-icon.png" alt="Email" class="contact-icon-img">
+          </a></p>
+          <p><a class="contact-icon-link contact-icon-link--compact" href="https://www.linkedin.com/in/momin-raza-040850377/" target="_blank" rel="noopener" aria-label="Visit my LinkedIn profile">
+            <img src="assets/linkedin-icon.png" alt="LinkedIn" class="contact-icon-img">
+          </a></p>
         </div>
       </div>
     </section>
@@ -205,9 +232,15 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>© <span id="year"></span> Muhammad Momin Raza</div>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/momin-raza-040850377/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#">GitHub</a>
+      <div class="socials" aria-label="Social links">
+        <a class="social-link" href="https://www.linkedin.com/in/momin-raza-040850377/" target="_blank" rel="noopener" aria-label="Visit my LinkedIn profile">
+          <img src="assets/linkedin-footer-icon.png" alt="LinkedIn" />
+        </a>
+        <a class="social-link" href="https://github.com/SheikhMomin123/" target="_blank" rel="noopener" aria-label="Visit my GitHub profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.9.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.34-1.27-1.7-1.27-1.7-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.74.8 1.18 1.83 1.18 3.09 0 4.42-2.7 5.39-5.27 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+          </svg>
+        </a>
       </div>
     </div>
   </footer>
@@ -216,3 +249,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
