@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Replace FORMSPREE_ENDPOINT with your Formspree form endpoint (e.g. https://formspree.io/f/xyz)
   // Or set USE_SERVER to true and run the optional Node backend included in this repo.
   const CONFIG = {
-    FORMSPREE_ENDPOINT: 'https://formspree.io/f/yourFormId',
+    FORMSPREE_ENDPOINT: '',
     USE_SERVER: false,
     SERVER_ENDPOINT: 'http://localhost:3000/send'
   };
@@ -105,17 +105,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } else {
         // Client-side submission to Formspree
+        if (!CONFIG.FORMSPREE_ENDPOINT || CONFIG.FORMSPREE_ENDPOINT.includes('yourFormId')) {
+          formMsg.textContent = 'Contact form is not configured. Set CONFIG.FORMSPREE_ENDPOINT in script.js or enable USE_SERVER.';
+          return;
+        }
         const formData = new FormData();
         formData.append('name', name);
         formData.append('email', email);
         formData.append('message', message);
         const res = await fetch(CONFIG.FORMSPREE_ENDPOINT, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
-        const data = await res.json();
+        const data = await res.json().catch(() => null);
         if (res.ok) {
           formMsg.textContent = 'Message sent — thank you!';
           form.reset();
+        } else if (data?.error) {
+          if (data.error.toLowerCase().includes('form not found')) {
+            formMsg.textContent = 'Formspree endpoint invalid. Update CONFIG.FORMSPREE_ENDPOINT in script.js with the correct Formspree URL.';
+          } else {
+            formMsg.textContent = data.error;
+          }
+        } else if (res.status === 404) {
+          formMsg.textContent = 'Formspree endpoint not found (404). Please verify CONFIG.FORMSPREE_ENDPOINT in script.js.';
         } else {
-          formMsg.textContent = data?.error || 'Failed to send message. Check your Formspree endpoint.';
+          formMsg.textContent = 'Failed to send message. Check your Formspree endpoint or enable USE_SERVER.';
         }
       }
     } catch (err) {
